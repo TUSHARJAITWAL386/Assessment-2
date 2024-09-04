@@ -1,0 +1,8 @@
+:concurrency: 5
+:queues:
+  - default
+:scheduler:
+  :schedule:
+    weekly_progress_report:
+      cron: "* * * * *" # Runs every day at midnight
+      class: "WeeklyProgressReportJob"

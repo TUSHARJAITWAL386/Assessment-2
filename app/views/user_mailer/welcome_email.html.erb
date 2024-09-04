@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Service</title>
+    <style>
+        /* Basic Reset */
+        body, table, td {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            border: none;
+            display: block;
+        }
+        /* Container */
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        /* Header */
+        .email-header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* Body */
+        .email-body {
+            padding: 20px;
+            color: #333333;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .email-body h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .email-body p {
+            margin-bottom: 15px;
+        }
+        .email-body .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Footer */
+        .email-footer {
+            background-color: #f4f4f4;
+            color: #777777;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+        }
+        .email-footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="email-header">
+            Welcome to Our Service!
+        </div>
+
+        <!-- Body -->
+        <div class="email-body">
+            <h1>Hello, <%= @user.name%>!</h1>
+            <p>Thank you for registering with us. We are excited to have you on board.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="email-footer">
+            <p>Need help? Visit our <a href="#">support page</a> or contact us at <a href="https://tusharjaitwal.github.io/my-profile.github.io/"><u>support@your-admin.com</u></a>.</p>
+            <p>&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+        

@@ -1,0 +1,53 @@
+<h1>Weekly Student Progress Report</h1>
+<p>Here is the progress data for the week:</p>
+
+<%  @progress_data.each do |data| %>
+  <h2>Student: <%= data[:name] %> (<%= data[:email] %>)</h2>
+
+  <h3>Enrolled Courses</h3>
+  <% if data[:enrolled_courses].present? %>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Course Description</th>
+          <!-- Add more columns as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <% data[:enrolled_courses].each do |course| %>
+          <tr>
+            <td><%= course.name %></td>
+            <td><%= course.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No enrolled courses.</p>
+  <% end %>
+
+  <h3>Enrollments</h3>
+  <% if data[:enrollments].present? %>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data[:enrollments].each do |enrollment| %>
+          <tr>
+            <td><%= enrollment.course.name %></td>
+            <td><%= enrollment.grade %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No enrollments.</p>
+  <% end %>
+
+  <hr>
+<% end %>
